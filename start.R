@@ -9,5 +9,8 @@ library(downloader)
 
 
 router <- plumb("api.R")
-router$run(host = "0.0.0.0", swagger = FALSE, port = 8080)
-
+if (Sys.getenv("CONTEXT") == "DEV") {
+  router$run()
+} else {
+  router$run(host = "0.0.0.0", swagger = FALSE, port = 8080)
+}
