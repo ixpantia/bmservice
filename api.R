@@ -1,4 +1,7 @@
-
+#* @apiTitle Worldbank Download service
+#* @apiVersion 0.0.1
+#* @apiContact hello@ixpantia.com
+#* @apiDescription A minimal example to show how to bring a data pipeline to a service
 
 #* @get /version
 function() {
